@@ -87,7 +87,7 @@
         "name": "Bed Room TV",
         "type": "tv",
         "state": {
-          "on": false,
+          "on": true,
           "playing": "None",
           "volume": 20,
           "muted": false,

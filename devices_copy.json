@@ -71,8 +71,8 @@
         "name": "Bed Room Light",
         "type": "light",
         "state": {
-            "on": true,
-            "brightness": 100,
+            "on": false,
+            "brightness": 0,
             "color": "white"
         },
         "controls": {
@@ -89,8 +89,8 @@
         "state": {
             "position": 50,
             "tilt": 0,
-            "on": true,
-            "playing": "Star Wars",
+            "on": false,
+            "playing": "movie name",
             "volume": 20,
             "muted": false,
             "source": "hdmi1"
@@ -111,7 +111,9 @@
             "playing": "Star Wars",
             "volume": 20,
             "muted": false,
-            "source": "hdmi1"
+            "source": "hdmi1",
+            "position": 0,
+            "tilt": 0
         },
         "controls": {
             "on": "https://api.smartthings.com/devices/tv_id_2/commands/switchOn",
@@ -127,8 +129,8 @@
         "name": "Bed Room Thermostat",
         "type": "thermostat",
         "state": {
-            "mode": "heat",
-            "targetTemperature": 72,
+            "mode": "cold",
+            "targetTemperature": 60,
             "currentTemperature": 70,
             "fanLevel": "auto"
         },
