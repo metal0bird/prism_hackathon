@@ -1,17 +1,30 @@
+// maping locations to their id's
 const locationIds = {
-    "Living Room": "living_room_id",
-    "Kitchen": "kitchen_id",
-    "Bedroom": "bedroom_id",
-    "Bathroom": "bathroom_id",
-    // Add more locations and IDs as needed
+    "Beach House": "beach_house_id",
+    "Home": "home_id",
+    "Office": "office_id"
   };
-  const roomIds = {
-    "Living Room": "living_room_id",
-    "Kitchen": "kitchen_id",
-    "Bedroom": "bedroom_id",
-    "Bathroom": "bathroom_id",
-    // Add more locations and IDs as needed
+  
+const roomData = {
+    "Beach House": {
+      "Living Room": "beach_house_living_room_id",
+      "Bedroom": "beach_house_bedroom_id",
+      "Kitchen": "beach_house_kitchen_id",
+    },
+    "Home": {
+      "Living Room": "home_living_room_id",
+      "Bedroom": "home_bedroom_id",
+      "Kitchen": "home_kitchen_id",
+      "Bathroom": "home_bathroom_id",
+    },
+    "Office": {
+      "Conference Room": "office_conference_room_id",
+      "Break Room": "office_break_room_id",
+      "Workstation 1": "office_workstation_1_id"
+    }
   };
+  
+
   navigator.mediaDevices.getUserMedia({ video: true })
     .then(stream => {
       const video = document.getElementById('video');
@@ -19,7 +32,7 @@ const locationIds = {
   
       const qrScanner = new Instascan.Scanner({ video: video });
       qrScanner.addListener('scan', (content) => {
-        const deviceData = JSON.parse(content);
+        const deviceId = JSON.parse(content);
   
         // Get location name from user input:
         const locationName = prompt("Enter Location Name:");
@@ -34,20 +47,24 @@ const locationIds = {
   
         // Prompt for room name
         const room = prompt("Enter Room Name:");
+        const roomId = roomData[locationName][room];
+        if (!roomId) {
+          console.error("Invalid Room Name. Please choose from available options:");
+          console.log(Object.keys(roomData[locationName])); // List available rooms
+          return;
+        }
   
         // Store or process device details, location ID, and room information
-        console.log("Device Details:", deviceData);
+        console.log("Device ID:", deviceId);
         console.log("Location ID:", locationId);
-        console.log("Room:", room);
+        console.log("Room ID:", roomId);
   
         // Example of storing data in an object:
         const storedData = {
-          device: deviceData,
+          device: deviceId,
           locationId,
-          room
+          roomId
         };
-  
-        // ... Use storedData for further actions
       });
     })
     .catch(error => console.error("Error accessing camera:", error));
