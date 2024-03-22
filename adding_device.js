@@ -1,29 +1,20 @@
-// maping locations to their id's
-const locationIds = {
-    "Beach House": "beach_house_id",
-    "Home": "home_id",
-    "Office": "office_id"
-  };
+// loading location id's
+fetch('location.json')
+  .then(response => response.json())
+  .then(data => {
+    const locationIds = data; 
+  })
+  .catch(error => console.error("Error fetching rooms data:", error));
 
-  const roomIds = {
-    "Beach House": {
-      "Living Room": "beach_house_living_room_id",
-      "Bedroom": "beach_house_bedroom_id",
-      "Kitchen": "beach_house_kitchen_id",
-    },
-    "Home": {
-      "Living Room": "home_living_room_id",
-      "Bedroom": "home_bedroom_id",
-      "Kitchen": "home_kitchen_id",
-      "Bathroom": "home_bathroom_id",
-    },
-    "Office": {
-      "Conference Room": "office_conference_room_id",
-      "Break Room": "office_break_room_id",
-      "Workstation 1": "office_workstation_1_id",
-    }
-  };
+  // loading room id's
+  fetch('room.json')
+  .then(response => response.json())
+  .then(data => {
+    const roomIds = data; 
+  })
+  .catch(error => console.error("Error fetching rooms data:", error));
 
+// loading device data and state
 fetch('device.json')
   .then(response => response.json())
   .then(data => {
