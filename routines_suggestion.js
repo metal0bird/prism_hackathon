@@ -107,3 +107,4 @@ if (recommendedRoutineName) {
 } else {
     console.log("No routine recommendation available.");
 }
+
