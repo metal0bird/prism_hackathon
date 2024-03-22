@@ -1,5 +1,5 @@
 ## Following is the structure of the files in this repo
-Note : all the API calls referenced in the following project is taken from official [Samsung SmartThings Developers](https://developer.smartthings.com/docs/api/public) page
+Note : all the API calls referenced in the following project is taken from official <a href="https://developer.smartthings.com/docs/api/public" target="_blank">Samsung SmartThings Developers</a> page
 
 ### Data files
 - device.json :  contains information about a specific devices, the herirarchy goes like Location -> Room -> Devices ( id , current state )
