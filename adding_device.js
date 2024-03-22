@@ -4,8 +4,8 @@ const locationIds = {
     "Home": "home_id",
     "Office": "office_id"
   };
-  
-const roomData = {
+
+  const roomIds = {
     "Beach House": {
       "Living Room": "beach_house_living_room_id",
       "Bedroom": "beach_house_bedroom_id",
@@ -20,10 +20,17 @@ const roomData = {
     "Office": {
       "Conference Room": "office_conference_room_id",
       "Break Room": "office_break_room_id",
-      "Workstation 1": "office_workstation_1_id"
+      "Workstation 1": "office_workstation_1_id",
     }
   };
-  
+
+fetch('device.json')
+  .then(response => response.json())
+  .then(data => {
+    const deviceData = data; 
+  })
+  .catch(error => console.error("Error fetching rooms data:", error));
+
 
   navigator.mediaDevices.getUserMedia({ video: true })
     .then(stream => {
@@ -47,7 +54,7 @@ const roomData = {
   
         // Prompt for room name
         const room = prompt("Enter Room Name:");
-        const roomId = roomData[locationName][room];
+        const roomId = roomIds[locationName][room];
         if (!roomId) {
           console.error("Invalid Room Name. Please choose from available options:");
           console.log(Object.keys(roomData[locationName])); // List available rooms
