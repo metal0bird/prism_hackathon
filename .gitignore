@@ -1,4 +1,7 @@
-/.Pythonic_4_ThePollyanna.html
-/.Pythonic_4_ThePollyanna.zip
-/.Pythonic_4_ThePollyanna.txt
+Pythonic_4_ThePollyanna.html
+Pythonic_4_ThePollyanna.zip
+Pythonic_4_ThePollyanna.txt
 /.DS_Store
+node_modules
+package-lock.json
+package.json
