@@ -1,0 +1,47 @@
+[
+    {
+      "timestamp": "2024-03-30 07:30:00",
+      "routine": "Wake Up"
+    },
+    {
+      "timestamp": "2024-03-30 08:00:00",
+      "routine": "Make Coffee"
+    },
+    {
+      "timestamp": "2024-03-30 10:00:00",
+      "routine": "Start Work"  
+    },
+    {
+      "timestamp": "2024-03-30 12:00:00",
+      "routine": "Lunch Break"
+    },
+    {
+      "timestamp": "2024-03-30 19:00:00",
+      "routine": "Movie Night"
+    },
+    {
+      "timestamp": "2024-03-29 18:00:00",
+      "routine": "Dinner Time"
+    },
+    {
+      "timestamp": "2024-03-29 20:00:00",
+      "routine": "Relaxation Time"
+    },
+    {
+      "timestamp": "2024-03-29 10:00:00",
+      "routine": "Morning Cleaning"
+    },
+    {
+      "timestamp": "2024-03-28 21:00:00",
+      "routine": "Relaxation Time"
+    },
+    {
+      "timestamp": "2024-03-28 19:00:00",
+      "routine": "Dinner Time"
+    },
+    {
+      "timestamp": "2024-03-28 18:00:00",
+      "routine": "Homecoming"  
+    }
+  ]
+  

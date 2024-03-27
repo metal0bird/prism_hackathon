@@ -168,29 +168,6 @@ with gr.Blocks() as demo:
 if __name__ == "__main__":
     demo.launch()
 
-"""
-with gr.Blocks() as demo:
-    chatbot = gr.Chatbot()
-    msg = gr.Textbox()
-    clear = gr.ClearButton([msg, chatbot])
 
-    def respond(message, chat_history):
-        response=chat(message)
-        chat_history.append((message, response))
-        return "", chat_history
-
-    msg.submit(respond, [msg, chatbot], [msg, chatbot])
-
-if __name__ == "__main__":
-    demo.launch()
-
-    if __name__ == "__main__":
-    while True:
-        user_input = input("User: ")
-
-        response = chat(user_input)
-        print("SAM: ", response)
-
-"""
 
 
