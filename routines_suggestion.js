@@ -100,10 +100,11 @@ const routines = {
   }
 
 const currentTimestamp = new Date().toISOString();
+console.log(currentTimestamp)
 const recommendedRoutineName = recommendRoutine(userLogs, routines, currentTimestamp);
 
 if (recommendedRoutineName) {
-    console.log("Hey ",user," do you want me to trigger ", recommendedRoutineName, " routine?");
+    console.log("Hey",user,"do you want me to trigger", recommendedRoutineName, "routine?");
 } else {
     console.log("No routine recommendation available.");
 }
