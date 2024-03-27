@@ -1,0 +1,35 @@
+[
+    {
+        "name": "Wake Up",
+        "devices": [
+            "Bedroom Light",
+            "Coffee Maker",
+            "Thermostat",
+            "Newscaster"
+        ]
+    },
+    {
+        "name": "Movie Night",
+        "devices": [
+            "Living Room Lights",
+            "TV",
+            "Streaming Service"
+        ]
+    },
+    {
+        "name": "Goodnight",
+        "devices": [
+            "Bedroom Light",
+            "Living Room Lights",
+            "Thermostat",
+            "Security System"
+        ]
+    },
+    {
+        "name": "Homecoming",
+        "devices": [
+            "Living Room Lights",
+            "Thermostat"
+        ]
+    }
+]
