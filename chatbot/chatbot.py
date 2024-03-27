@@ -2,7 +2,7 @@ import openai
 import gradio as gr
 import json
 
-
+# function for adding a routine to the routines.json file
 def add_routine(new_routine, filename="/Users/aman/Github bs/website_prism/prisma-hackathon/routines.json"):
   if isinstance(new_routine, str):
       try:
@@ -21,6 +21,7 @@ def add_routine(new_routine, filename="/Users/aman/Github bs/website_prism/prism
   with open(filename, "w") as file:
       json.dump(routines, file, indent=4)
 
+# function for adding a device to the device.json file
 def add_device(new_device, filename="/Users/aman/Github bs/website_prism/prisma-hackathon/device.json"):
   if isinstance(new_device, str):
       try:
@@ -42,6 +43,7 @@ def add_device(new_device, filename="/Users/aman/Github bs/website_prism/prisma-
 # Point to the local server
 client = openai.OpenAI(base_url="http://localhost:1234/v1", api_key="lm-studio")
 
+# respond to user's query, for hey sam add a routine command
 def routine(user_input):
 
     messages = [{"role": "system", "content": 
@@ -78,6 +80,7 @@ def routine(user_input):
     response = "Routine added, can I help you with something else?"
     return response  # Returns response 
 
+# respond to user's query, for hey sam add a device command
 def device(user_input):
 
     messages = [{"role": "system", "content": 
@@ -108,7 +111,7 @@ def device(user_input):
     response = "Device added, can I help you with something else?"
     return response  # Returns response 
 
-
+# respond to user's query, for general chat
 def chat(user_input):
 
     messages = [{"role": "system", "content": 
@@ -144,7 +147,8 @@ def chat(user_input):
     response = completion.choices[0].message.content
     return response  # Returns response 
 
-    
+
+# gradio implementation for the chatbot interface
 with gr.Blocks() as demo:
     chatbot = gr.Chatbot()
     msg = gr.Textbox()

@@ -58,6 +58,8 @@ const routines = {
   };
   
 
+  // to recommend a routine based on user logs
+
   function recommendRoutine(userLogs, routines, currentTime) {
     // Analyze recent user logs (e.g., last 3-5 days)
     const recentLogs = userLogs.filter(log => {
@@ -99,6 +101,7 @@ const routines = {
     return recommendedRoutine;
   }
 
+// taking current timestamp for recommendation engine to work with 
 const currentTimestamp = new Date().toISOString();
 console.log(currentTimestamp)
 const recommendedRoutineName = recommendRoutine(userLogs, routines, currentTimestamp);

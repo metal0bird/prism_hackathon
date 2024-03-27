@@ -1,3 +1,5 @@
+
+
 function checkForHomeArrival(userLocation, homeLocation, radius) {
     if (!navigator.geolocation) {
       console.log("Geolocation is not supported by your browser.");
@@ -46,6 +48,7 @@ function checkForHomeArrival(userLocation, homeLocation, radius) {
     }
   }
   
+  // using dummy locations for POC
   const homeLocation = { latitude: 37.7749, longitude: -122.4194 }; 
   const radius = 50; 
   

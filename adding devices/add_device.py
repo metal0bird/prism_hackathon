@@ -20,7 +20,7 @@ def scan_qr_code():
       break
   cap.release()
   cv2.destroyAllWindows()
-  return None  # Return None if no code found or on exit
+  return None  
 
 # Function to decode QR codes from a frame
 def decode_qr_codes(frame):
