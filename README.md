@@ -17,3 +17,6 @@ Note : all the API calls referenced in the following project is taken from offic
 - warning.js : a POC file that gives warning if extreme settings are being changed (eg, thermostat), result : warning to avoid harm
 
 
+### Dependencies:
+- python libraries:  OpenAI, Gym, gradio, cv2, 
+
